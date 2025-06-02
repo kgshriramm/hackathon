@@ -1,0 +1,48 @@
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #075e6b;
+  color: white;
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  background-color: #043c44;
+  width: 250px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+.main {
+  margin-left: 250px;
+  flex: 1;
+  padding: 2rem;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.card, .apply-card {
+  background-color: #06565e;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.apply-button {
+  background-color: #ff6a3d;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
