@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for Army Schemes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #075e6b;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .apply-form {
+      background: linear-gradient(135deg, #06565e, #057e8c);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .apply-form h2 {
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 5px;
+    }
+
+    .apply-button {
+      background: linear-gradient(45deg, #ff6a3d, #ff3f3f);
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+
+    .apply-button:hover {
+      background: linear-gradient(45deg, #ff3f3f, #ff6a3d);
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>📄 Apply for Army Welfare Schemes</h1>
+    <div class="apply-form">
+      <h2>Fill Your Details</h2>
+      <form id="schemeForm">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Service Type:</label>
+          <select id="service" name="service">
+            <option>Army</option>
+            <option>Navy</option>
+            <option>Air Force</option>
+          </select>
+        </div>
+<select id="scheme" name="scheme">
+  <option disabled selected>Loading schemes...</option>
+</select>
+
+        <div class="form-group">
+          <label for="scheme">Select Scheme:</label>
+          <select id="scheme" name="scheme">
+            <option>🎓 Education Assistance</option>
+            <option>🏥 Medical Reimbursement</option>
+            <option>🏡 Housing Benefits</option>
+            <option>💳 Pension & Retirement Plans</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Additional Details:</label>
+          <textarea id="comments" name="comments" rows="4" placeholder="Enter additional information"></textarea>
+        </div>
+
+        <button type="submit" class="apply-button">Submit Application</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('schemeForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch('/api/apply', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+          alert('✅ Application submitted successfully!');
+          this.reset();
+        } else {
+          alert('❌ Failed to submit application.');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('❌ An error occurred while submitting.');
+      }
+    });
+  </script>
+</body>
+
+</html>

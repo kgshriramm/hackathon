@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - Sainik Connect</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #075e6b;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signup-box {
+      background: #06616f;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .signup-box h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #ff3f3f;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff6a3d;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-box">
+    <h2>📝 Sign Up</h2>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // You can store to localStorage if needed
+      const name = document.getElementById('name').value;
+      localStorage.setItem('userName', name); // Optional
+
+      alert('✅ Sign-up successful!');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

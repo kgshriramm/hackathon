@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Army Benefits</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #075e6b;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, #06565e, #057e8c);
+            border-radius: 12px;
+            padding: 1.5rem;
+            color: white;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .benefit-card:hover {
+            transform: scale(1.05);
+        }
+
+        .benefit-button {
+            background: linear-gradient(45deg, #ff6a3d, #ff3f3f);
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: 0.3s ease-in-out;
+        }
+
+        .benefit-button:hover {
+            background: linear-gradient(45deg, #ff3f3f, #ff6a3d);
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎁 Army Benefits & Schemes</h1>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>🎓 Education Assistance</h3>
+                <p>Scholarships for children of armed forces personnel.</p>
+                <button class="benefit-button">Apply Now</button>
+            </div>
+            <div class="benefit-card">
+                <h3>🏥 Medical Reimbursement</h3>
+                <p>Hospital expense coverage for ex-servicemen & families.</p>
+                <button class="benefit-button">Claim Now</button>
+            </div>
+            <div class="benefit-card">
+                <h3>🏡 Housing Benefits</h3>
+                <p>Subsidized housing for war widows & retired personnel.</p>
+                <button class="benefit-button">Apply Now</button>
+            </div>
+            <div class="benefit-card">
+                <h3>💳 Pension & Retirement Plans</h3>
+                <p>Exclusive pension plans for retired army personnel.</p>
+                <button class="benefit-button">View Plans</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Assistance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #075e6b;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .emergency-box {
+            background: linear-gradient(135deg, #06565e, #057e8c);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .emergency-box h2 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .emergency-button {
+            background: linear-gradient(45deg, #ff6a3d, #ff3f3f);
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        .emergency-button:hover {
+            background: linear-gradient(45deg, #ff3f3f, #ff6a3d);
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚨 Emergency Assistance</h1>
+        <div class="emergency-box">
+            <h2>Immediate Help for Army Personnel & Families</h2>
+            <p>If you need urgent assistance, contact the emergency helpline below.</p>
+            <div class="contact-info">
+                <p>📞 *Emergency Helpline:* <strong>1800-ARMY-HELP</strong></p>
+                <p>📍 *Nearest Army Relief Center:* <strong>Find Location</strong></p>
+                <p>📧 *Email Support:* <strong>support@armyrelief.gov</strong></p>
+            </div>
+            <button class="emergency-button" onclick="alert('Emergency request submitted!')">Request Assistance</button>
+        </div>
+    </div>
+</body>
+
+</html>
